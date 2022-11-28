@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MediaView: View {
-    
     private let title = Settings.TabBarTitles.media
     
     var body: some View {
@@ -23,10 +22,10 @@ struct MediaView: View {
             }
             .padding()
             .navigationTitle(title)
-            .navigationBarItems(trailing:
-                Button(action: { }) {
+            .navigationBarItems(
+                trailing: NavigationLink(destination: EditScreenView()) {
                     Text("Править")
-                    .foregroundColor(.red)
+                        .foregroundColor(.red)
                 }
             )
         }
