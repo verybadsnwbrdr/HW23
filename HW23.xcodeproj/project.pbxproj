@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A96782D293657D4005F716D /* MainMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A96782C293657D4005F716D /* MainMediaView.swift */; };
 		3AB6E0AC2931FB230098D039 /* HW23App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6E0AB2931FB230098D039 /* HW23App.swift */; };
 		3AB6E0AE2931FB230098D039 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6E0AD2931FB230098D039 /* ContentView.swift */; };
 		3AB6E0B02931FB250098D039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6E0AF2931FB250098D039 /* Assets.xcassets */; };
@@ -17,9 +18,13 @@
 		3AB6E0C02931FFB70098D039 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6E0BF2931FFB70098D039 /* SearchView.swift */; };
 		3AB6E0C2293205E90098D039 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6E0C1293205E90098D039 /* Settings.swift */; };
 		3AB6E0C429321C4D0098D039 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6E0C329321C4D0098D039 /* PlayerView.swift */; };
+		3AB6E0C82934F8120098D039 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6E0C72934F8120098D039 /* EditView.swift */; };
+		3AB6E0CA2934F84F0098D039 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6E0C92934F84F0098D039 /* Model.swift */; };
+		3AB6E0CE2934FC310098D039 /* EditScreenTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6E0CD2934FC310098D039 /* EditScreenTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A96782C293657D4005F716D /* MainMediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMediaView.swift; sourceTree = "<group>"; };
 		3AB6E0A82931FB230098D039 /* HW23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW23.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB6E0AB2931FB230098D039 /* HW23App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW23App.swift; sourceTree = "<group>"; };
 		3AB6E0AD2931FB230098D039 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,6 +36,9 @@
 		3AB6E0BF2931FFB70098D039 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		3AB6E0C1293205E90098D039 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		3AB6E0C329321C4D0098D039 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		3AB6E0C72934F8120098D039 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		3AB6E0C92934F84F0098D039 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		3AB6E0CD2934FC310098D039 /* EditScreenTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreenTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +52,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A96782829363CD4005F716D /* MediaTab */ = {
+			isa = PBXGroup;
+			children = (
+				3A96782E29365915005F716D /* MainMediaScreen */,
+				3AB6E0C62934F7970098D039 /* EditMediaScreen */,
+				3AB6E0BB2931FDCE0098D039 /* MediaView.swift */,
+			);
+			path = MediaTab;
+			sourceTree = "<group>";
+		};
+		3A96782929363CF7005F716D /* RadioTab */ = {
+			isa = PBXGroup;
+			children = (
+				3AB6E0BD2931FF870098D039 /* RadioView.swift */,
+			);
+			path = RadioTab;
+			sourceTree = "<group>";
+		};
+		3A96782A29363D0A005F716D /* SearchTab */ = {
+			isa = PBXGroup;
+			children = (
+				3AB6E0BF2931FFB70098D039 /* SearchView.swift */,
+			);
+			path = SearchTab;
+			sourceTree = "<group>";
+		};
+		3A96782B29364D5F005F716D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3AB6E0C92934F84F0098D039 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A96782E29365915005F716D /* MainMediaScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3A96782C293657D4005F716D /* MainMediaView.swift */,
+			);
+			path = MainMediaScreen;
+			sourceTree = "<group>";
+		};
+		3A96782F29365938005F716D /* PlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				3AB6E0C329321C4D0098D039 /* PlayerView.swift */,
+			);
+			path = PlayerView;
+			sourceTree = "<group>";
+		};
+		3A96783029365959005F716D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3AB6E0C1293205E90098D039 /* Settings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		3AB6E09F2931FB230098D039 = {
 			isa = PBXGroup;
 			children = (
@@ -65,12 +131,9 @@
 			children = (
 				3AB6E0AB2931FB230098D039 /* HW23App.swift */,
 				3AB6E0AD2931FB230098D039 /* ContentView.swift */,
-				3AB6E0B92931FD930098D039 /* LibraryView.swift */,
-				3AB6E0BB2931FDCE0098D039 /* MediaView.swift */,
-				3AB6E0BD2931FF870098D039 /* RadioView.swift */,
-				3AB6E0BF2931FFB70098D039 /* SearchView.swift */,
-				3AB6E0C329321C4D0098D039 /* PlayerView.swift */,
-				3AB6E0C1293205E90098D039 /* Settings.swift */,
+				3AB6E0C52934F7720098D039 /* MainScreen */,
+				3A96783029365959005F716D /* Settings */,
+				3A96782B29364D5F005F716D /* Model */,
 				3AB6E0AF2931FB250098D039 /* Assets.xcassets */,
 				3AB6E0B12931FB250098D039 /* Preview Content */,
 			);
@@ -83,6 +146,27 @@
 				3AB6E0B22931FB250098D039 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3AB6E0C52934F7720098D039 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3AB6E0B92931FD930098D039 /* LibraryView.swift */,
+				3A96782829363CD4005F716D /* MediaTab */,
+				3A96782929363CF7005F716D /* RadioTab */,
+				3A96782A29363D0A005F716D /* SearchTab */,
+				3A96782F29365938005F716D /* PlayerView */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		3AB6E0C62934F7970098D039 /* EditMediaScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3AB6E0C72934F8120098D039 /* EditView.swift */,
+				3AB6E0CD2934FC310098D039 /* EditScreenTableCell.swift */,
+			);
+			path = EditMediaScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,9 +241,13 @@
 			files = (
 				3AB6E0AE2931FB230098D039 /* ContentView.swift in Sources */,
 				3AB6E0BC2931FDCE0098D039 /* MediaView.swift in Sources */,
+				3A96782D293657D4005F716D /* MainMediaView.swift in Sources */,
 				3AB6E0BA2931FD930098D039 /* LibraryView.swift in Sources */,
+				3AB6E0CA2934F84F0098D039 /* Model.swift in Sources */,
+				3AB6E0CE2934FC310098D039 /* EditScreenTableCell.swift in Sources */,
 				3AB6E0C429321C4D0098D039 /* PlayerView.swift in Sources */,
 				3AB6E0AC2931FB230098D039 /* HW23App.swift in Sources */,
+				3AB6E0C82934F8120098D039 /* EditView.swift in Sources */,
 				3AB6E0C2293205E90098D039 /* Settings.swift in Sources */,
 				3AB6E0C02931FFB70098D039 /* SearchView.swift in Sources */,
 				3AB6E0BE2931FF870098D039 /* RadioView.swift in Sources */,

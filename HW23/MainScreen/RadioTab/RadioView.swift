@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct RadioView: View {
-    
     private let title = Settings.TabBarTitles.radio
     
     var body: some View {
         NavigationView {
-            Text("2")
+            Text("")
                 .navigationTitle(title)
         }
     }
