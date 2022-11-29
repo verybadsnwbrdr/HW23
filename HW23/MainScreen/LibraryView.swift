@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LibraryView: View {
-    
     private let titles = Settings.TabBarTitles.self
     private let images = Settings.TabBarImages.self
     
@@ -18,28 +17,28 @@ struct LibraryView: View {
                 MediaView()
                 PlayerView()
             }
-                .tabItem {
-                    Image(systemName: images.media)
-                    Text(titles.media)
-                }
+            .tabItem {
+                Image(systemName: images.media)
+                Text(titles.media)
+            }
             
             VStack {
                 RadioView()
                 PlayerView()
             }
-                .tabItem {
-                    Image(systemName: images.radio)
-                    Text(titles.radio)
-                }
+            .tabItem {
+                Image(systemName: images.radio)
+                Text(titles.radio)
+            }
             
             VStack {
                 SearchView()
                 PlayerView()
             }
-                .tabItem {
-                    Image(systemName: images.search)
-                    Text(titles.search)
-                }
+            .tabItem {
+                Image(systemName: images.search)
+                Text(titles.search)
+            }
         }
         .accentColor(.red)
     }

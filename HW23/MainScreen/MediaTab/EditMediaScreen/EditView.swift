@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct EditScreenView: View {
-    @State var models = EditScreenModel.tableModels
+    @State private var editMode: EditMode = .active
+    @State private var models = Model.tableModels
     @State private var multiSelection = Set<UUID>()
     
     var body: some View {
@@ -17,8 +18,8 @@ struct EditScreenView: View {
              selection: $multiSelection) { model in
             EditScreenTableCell(model: model.wrappedValue)
         }
-        .listStyle(.grouped)
-        .toolbar { EditButton() }
+             .environment(\.editMode, $editMode)
+             .listStyle(.inset)
     }
 }
 

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PlayerView: View {
+    private let settings = Settings.Player.self
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -15,20 +17,20 @@ struct PlayerView: View {
                 .frame(height: 60, alignment: .bottom)
                 .opacity(0.1)
             HStack {
-                Rectangle()
-                    .fill(.gray)
-                    .frame(width: 42, height: 42)
-                    .opacity(0.1)
+                Image(settings.songImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 46, height: 46)
                     .cornerRadius(5)
                     .shadow(color: .gray, radius: 5)
-                Text("Не исполняется")
+                Text(settings.songName)
                 Spacer()
-                Button (action: { }) {
-                    Image(systemName: "play.fill")
+                Button(action: { }) {
+                    Image(systemName: settings.playButton)
                         .foregroundColor(.black)
                 }
-                Button (action: { }) {
-                    Image(systemName: "forward.fill")
+                Button(action: { }) {
+                    Image(systemName: settings.skipButton)
                         .foregroundColor(.black)
                 }
             }

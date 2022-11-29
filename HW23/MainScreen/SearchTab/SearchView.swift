@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct SearchView: View {
-    
     private let title = Settings.TabBarTitles.search
     
     var body: some View {
         NavigationView {
-            Text("3")
+            Text("")
                 .navigationTitle(title)
         }
     }

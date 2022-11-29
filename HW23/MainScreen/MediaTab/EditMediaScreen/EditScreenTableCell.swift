@@ -21,6 +21,6 @@ struct EditScreenTableCell: View {
 
 struct EditScreenTableCell_Previews: PreviewProvider {
     static var previews: some View {
-        EditScreenTableCell(model: EditScreenModel.tableModels[0])
+        EditScreenTableCell(model: Model.tableModels[0])
     }
 }
