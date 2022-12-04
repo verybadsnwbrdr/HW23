@@ -9,10 +9,25 @@ import SwiftUI
 
 struct RadioView: View {
     private let title = Settings.TabBarTitles.radio
-    
+    private let settings = Settings.Radio.self
+
     var body: some View {
         NavigationView {
-            Text("")
+            ScrollView {
+                Divider()
+                    .padding([.leading,.trailing])
+                TopScrollView()
+                Divider()
+                    .padding([.leading,.trailing])
+                HStack {
+                    Text(settings.bottomSection)
+                        .bold()
+                        .font(.title2)
+                    Spacer()
+                }
+                .padding()
+                BottomScrollView()
+            }
                 .navigationTitle(title)
         }
     }
