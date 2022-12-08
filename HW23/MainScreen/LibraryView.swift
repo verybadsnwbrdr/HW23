@@ -14,7 +14,7 @@ struct LibraryView: View {
     var body: some View {
         TabView {
             VStack {
-                MediaView()
+                MediaScreenView()
                 PlayerView()
             }
             .tabItem {
@@ -23,7 +23,7 @@ struct LibraryView: View {
             }
             
             VStack {
-                RadioView()
+                RadioScreenView()
                 PlayerView()
             }
             .tabItem {

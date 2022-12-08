@@ -33,4 +33,9 @@ enum Settings {
         static let doneButton = "Готово"
         static let editButton = "Править"
     }
+    
+    enum Radio {
+        static let title = "Радио"
+        static let bottomSection = "Станции"
+    }
 }

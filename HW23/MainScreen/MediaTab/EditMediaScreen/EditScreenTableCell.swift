@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EditScreenTableCell: View {
-    let model: TableModel
+    let model: EditScreenModel
     
     var body: some View {
         HStack {
@@ -21,6 +21,6 @@ struct EditScreenTableCell: View {
 
 struct EditScreenTableCell_Previews: PreviewProvider {
     static var previews: some View {
-        EditScreenTableCell(model: Model.tableModels[0])
+        EditScreenTableCell(model: EditScreenModel.tableModels[0])
     }
 }
