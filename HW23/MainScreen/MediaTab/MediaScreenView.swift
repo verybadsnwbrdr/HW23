@@ -1,5 +1,5 @@
 //
-//  MediaView.swift
+//  MediaScreenView.swift
 //  HW23
 //
 //  Created by Anton on 26.11.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MediaView: View {
+struct MediaScreenView: View {
     private let settings = Settings.Media.self
     @State var isPresented = false
     
@@ -34,6 +34,6 @@ struct MediaView: View {
 
 struct MediaView_Previews: PreviewProvider {
     static var previews: some View {
-        MediaView()
+        MediaScreenView()
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EditScreenView: View {
     @State private var editMode: EditMode = .active
-    @State private var models = Model.tableModels
+    @State private var models = EditScreenModel.tableModels
     @State private var multiSelection = Set<UUID>()
     
     var body: some View {

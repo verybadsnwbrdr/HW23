@@ -7,23 +7,25 @@
 
 import SwiftUI
 
-struct BottomScrollView: View {
+struct RadioBottomScrollView: View {
+    var models = RadioScreenModel.bottomScrollModels
     var columns = [
         GridItem(.flexible())
     ]
     
     var body: some View {
         LazyVGrid(columns: columns) {
-            ForEach(0 ..< 5) { column in
+            ForEach(models, id: \.chapterTitle) { column in
                 HStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .frame(width: 150,height: 150)
-                        .foregroundColor(.gray)
-                        .opacity(0.2)
+                    Image(column.image)
+                        .resizable()
+                        .frame(width: 120,height: 120)
+                        .cornerRadius(10)
                     
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("Популярное")
-                        Text("То что слушают прямо сейчас")
+                        Text(column.chapterTitle)
+                            .font(.system(size: 14))
+                        Text(column.title)
                             .font(.system(size: 12))
                     }
                     .padding(.leading, 10)
@@ -38,6 +40,6 @@ struct BottomScrollView: View {
 
 struct BottomScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        BottomScrollView()
+        RadioBottomScrollView()
     }
 }

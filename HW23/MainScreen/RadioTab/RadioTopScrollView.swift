@@ -1,5 +1,5 @@
 //
-//  TopScrollView.swift
+//  RadioTopScrollView.swift
 //  HW23
 //
 //  Created by Anton on 04.12.2022.
@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct TopScrollView: View {
+struct RadioTopScrollView: View {
+    var models = RadioScreenModel.topScrollModels
     var rows = [
         GridItem(.fixed(280))
     ]
@@ -15,18 +16,18 @@ struct TopScrollView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: rows) {
-                ForEach(0 ..< 5) { row in
+                ForEach(models, id: \.title) { row in
                     VStack(alignment: .leading){
-                        Text("Избранная радиостанция")
+                        Text(row.chapterTitle)
                             .foregroundColor(.gray)
-                        Text("Популярное")
+                        Text(row.title)
                             .bold()
-                        Text("То, что слушают прямо сейчас")
+                        Text(row.subTitle ?? " ")
                             .foregroundColor(.gray)
-                        RoundedRectangle(cornerRadius: 10)
-                            .frame(width: 300)
-                            .foregroundColor(.gray)
-                            .opacity(0.2)
+                        Image(row.image)
+                            .resizable()
+                            .frame(width: 350, height: 240)
+                            .cornerRadius(10)
                     }
                 }
             }
@@ -37,6 +38,6 @@ struct TopScrollView: View {
 
 struct TopScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        TopScrollView()
+        RadioTopScrollView()
     }
 }

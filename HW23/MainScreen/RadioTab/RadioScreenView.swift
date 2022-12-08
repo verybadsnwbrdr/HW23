@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct RadioView: View {
+struct RadioScreenView: View {
     private let title = Settings.TabBarTitles.radio
     private let settings = Settings.Radio.self
-
+    
     var body: some View {
         NavigationView {
             ScrollView {
                 Divider()
                     .padding([.leading,.trailing])
-                TopScrollView()
+                RadioTopScrollView()
                 Divider()
                     .padding([.leading,.trailing])
                 HStack {
@@ -26,15 +26,15 @@ struct RadioView: View {
                     Spacer()
                 }
                 .padding()
-                BottomScrollView()
+                RadioBottomScrollView()
             }
-                .navigationTitle(title)
+            .navigationTitle(title)
         }
     }
 }
 
 struct RadioView_Previews: PreviewProvider {
     static var previews: some View {
-        RadioView()
+        RadioScreenView()
     }
 }
