@@ -11,6 +11,7 @@
 		3A8F2BC5293CEEB0008EC132 /* RadioTopScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F2BC4293CEEB0008EC132 /* RadioTopScrollView.swift */; };
 		3A8F2BC7293CF0D0008EC132 /* RadioBottomScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F2BC6293CF0D0008EC132 /* RadioBottomScrollView.swift */; };
 		3A96782D293657D4005F716D /* MainMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A96782C293657D4005F716D /* MainMediaView.swift */; };
+		3AA64EFB294A2631009561A5 /* LargePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA64EFA294A2631009561A5 /* LargePlayerView.swift */; };
 		3AB6E0AC2931FB230098D039 /* HW23App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6E0AB2931FB230098D039 /* HW23App.swift */; };
 		3AB6E0AE2931FB230098D039 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6E0AD2931FB230098D039 /* ContentView.swift */; };
 		3AB6E0B02931FB250098D039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6E0AF2931FB250098D039 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		3A8F2BC4293CEEB0008EC132 /* RadioTopScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioTopScrollView.swift; sourceTree = "<group>"; };
 		3A8F2BC6293CF0D0008EC132 /* RadioBottomScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioBottomScrollView.swift; sourceTree = "<group>"; };
 		3A96782C293657D4005F716D /* MainMediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMediaView.swift; sourceTree = "<group>"; };
+		3AA64EFA294A2631009561A5 /* LargePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargePlayerView.swift; sourceTree = "<group>"; };
 		3AB6E0A82931FB230098D039 /* HW23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW23.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB6E0AB2931FB230098D039 /* HW23App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW23App.swift; sourceTree = "<group>"; };
 		3AB6E0AD2931FB230098D039 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				3AB6E0C329321C4D0098D039 /* PlayerView.swift */,
+				3AA64EFA294A2631009561A5 /* LargePlayerView.swift */,
 			);
 			path = PlayerView;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				3AB6E0AE2931FB230098D039 /* ContentView.swift in Sources */,
 				3AB6E0BC2931FDCE0098D039 /* MediaScreenView.swift in Sources */,
 				3A96782D293657D4005F716D /* MainMediaView.swift in Sources */,
+				3AA64EFB294A2631009561A5 /* LargePlayerView.swift in Sources */,
 				3AB6E0BA2931FD930098D039 /* LibraryView.swift in Sources */,
 				3AB6E0CA2934F84F0098D039 /* EditScreenModel.swift in Sources */,
 				3A8F2BC5293CEEB0008EC132 /* RadioTopScrollView.swift in Sources */,
