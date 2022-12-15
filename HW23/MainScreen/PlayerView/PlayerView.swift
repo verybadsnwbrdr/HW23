@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PlayerView: View {
     private let settings = Settings.Player.self
+	@State private var isPresented = false
     
     var body: some View {
         ZStack {
@@ -36,6 +37,15 @@ struct PlayerView: View {
             }
             .padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
         }
+		.gesture(
+			TapGesture()
+				.onEnded {
+					isPresented.toggle()
+				}
+		)
+		.fullScreenCover(isPresented: $isPresented) {
+			LargePlayerView(isPresented: $isPresented)
+		}
     }
 }
 
