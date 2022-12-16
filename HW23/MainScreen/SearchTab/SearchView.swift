@@ -18,13 +18,11 @@ struct SearchView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                HStack {
-                    Text("Поиск по категориям")
-                        .font(.title3)
-                        .bold()
-                    Spacer()
-                }
+			VStack(alignment: .leading) {
+				Text("Поиск по категориям")
+					.font(.title3)
+					.bold()
+				
                 ScrollView(.vertical) {
                     LazyVGrid(columns: columns) {
                         ForEach(0 ..< 20) { item in
@@ -44,7 +42,8 @@ struct SearchView: View {
                     }
                 }
             }
-            .padding()
+			.padding([.leading, .trailing])
+			.edgesIgnoringSafeArea(.bottom)
             .navigationTitle(title)
         }
         .searchable(text: $searchText, prompt: "Ваша медиатека")
