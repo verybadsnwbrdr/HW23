@@ -9,13 +9,15 @@ import SwiftUI
 
 struct PlayerView: View {
     private let settings = Settings.Player.self
+	@State private var isPresented = false
+	@State private var xOffset: CGSize = .zero
     
     var body: some View {
         ZStack {
             Rectangle()
                 .fill(.gray)
                 .frame(height: 60, alignment: .bottom)
-                .opacity(0.1)
+				.opacity(0.1)
             HStack {
                 Image(settings.songImage)
                     .resizable()
@@ -34,13 +36,45 @@ struct PlayerView: View {
                         .foregroundColor(.black)
                 }
             }
-            .padding(EdgeInsets(top: 5, leading: 30, bottom: 5, trailing: 30))
+			.padding([.top, .bottom], 5)
+			.padding([.leading, .trailing], 30)
         }
+		.gesture(
+			TapGesture()
+				.onEnded {
+					isPresented.toggle()
+				}
+		)
+		.fullScreenCover(isPresented: $isPresented) {
+			LargePlayerView()
+				.offset(x: 0, y: xOffset.height)
+				.animation(.linear, value: xOffset)
+				.gesture(dragGesture)
+		}
     }
 }
 
+private extension PlayerView {
+	var dragGesture: some Gesture {
+		DragGesture(minimumDistance: 10)
+			.onChanged { value in
+				if value.translation.height > 0 {
+					xOffset.height = value.translation.height
+				}
+			}
+			.onEnded { value in
+				if xOffset.height > 300 {
+					isPresented.toggle()
+					xOffset.height = .zero
+				} else {
+					xOffset.height = .zero
+				}
+			}
+	}
+}
+
 struct PlayerView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlayerView()
-    }
+	static var previews: some View {
+		PlayerView()
+	}
 }

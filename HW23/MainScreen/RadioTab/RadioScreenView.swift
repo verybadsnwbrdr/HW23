@@ -16,7 +16,7 @@ struct RadioScreenView: View {
             ScrollView {
                 Divider()
                     .padding([.leading,.trailing])
-                RadioTopScrollView()
+                RectangleHorizontalScrollView()
                 Divider()
                     .padding([.leading,.trailing])
                 HStack {
@@ -26,7 +26,7 @@ struct RadioScreenView: View {
                     Spacer()
                 }
                 .padding()
-                RadioBottomScrollView()
+                VerticalListScrollView()
             }
             .navigationTitle(title)
         }

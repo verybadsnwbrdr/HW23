@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct RadioBottomScrollView: View {
-    var models = RadioScreenModel.bottomScrollModels
+struct VerticalListScrollView: View {
+    var models = GeneralModel.bottomScrollModels
     var columns = [
         GridItem(.flexible())
     ]
@@ -40,6 +40,6 @@ struct RadioBottomScrollView: View {
 
 struct BottomScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        RadioBottomScrollView()
+        VerticalListScrollView()
     }
 }

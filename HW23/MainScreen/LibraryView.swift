@@ -32,8 +32,8 @@ struct LibraryView: View {
             }
             
             VStack {
-                SearchView()
-                PlayerView()
+				SearchView()
+				PlayerView()
             }
             .tabItem {
                 Image(systemName: images.search)
