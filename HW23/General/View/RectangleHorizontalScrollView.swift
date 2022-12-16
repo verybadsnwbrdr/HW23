@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct RadioTopScrollView: View {
-    var models = RadioScreenModel.topScrollModels
+struct RectangleHorizontalScrollView: View {
+    var models = GeneralModel.topScrollModels
     var rows = [
         GridItem(.fixed(280))
     ]
@@ -38,6 +38,6 @@ struct RadioTopScrollView: View {
 
 struct TopScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        RadioTopScrollView()
+        RectangleHorizontalScrollView()
     }
 }

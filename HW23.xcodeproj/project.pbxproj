@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A06E5D1293E547A0062C9B0 /* RadioScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A06E5D0293E547A0062C9B0 /* RadioScreenModel.swift */; };
+		3A06E5D1293E547A0062C9B0 /* GeneralModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A06E5D0293E547A0062C9B0 /* GeneralModel.swift */; };
 		3A5F52AB294B6A160063B430 /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F52AA294B6A160063B430 /* CustomSliderView.swift */; };
 		3A5F52AD294B7DD30063B430 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F52AC294B7DD30063B430 /* CustomButtonView.swift */; };
 		3A5F52AF294CA8490063B430 /* Float + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F52AE294CA8490063B430 /* Float + Extension.swift */; };
 		3A5F52B1294CB3AF0063B430 /* MusicProgressPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F52B0294CB3AF0063B430 /* MusicProgressPlayerView.swift */; };
-		3A8F2BC5293CEEB0008EC132 /* RadioTopScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F2BC4293CEEB0008EC132 /* RadioTopScrollView.swift */; };
-		3A8F2BC7293CF0D0008EC132 /* RadioBottomScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F2BC6293CF0D0008EC132 /* RadioBottomScrollView.swift */; };
+		3A5F52B4294CC77F0063B430 /* SearchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F52B3294CC77F0063B430 /* SearchDetailView.swift */; };
+		3A5F52B8294CD1CB0063B430 /* CircleEllipsisButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F52B7294CD1CB0063B430 /* CircleEllipsisButton.swift */; };
+		3A5F52BA294CE0FB0063B430 /* SquareHorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F52B9294CE0FB0063B430 /* SquareHorizontalScrollView.swift */; };
+		3A8F2BC5293CEEB0008EC132 /* RectangleHorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F2BC4293CEEB0008EC132 /* RectangleHorizontalScrollView.swift */; };
+		3A8F2BC7293CF0D0008EC132 /* VerticalListScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F2BC6293CF0D0008EC132 /* VerticalListScrollView.swift */; };
 		3A8FA143294B5C200012421E /* LargePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8FA142294B5C200012421E /* LargePlayerView.swift */; };
 		3A96782D293657D4005F716D /* MainMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A96782C293657D4005F716D /* MainMediaView.swift */; };
-		3AA64EFD294B5A94009561A5 /* SliderPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA64EFC294B5A94009561A5 /* SliderPlayerView.swift */; };
 		3AB6E0AC2931FB230098D039 /* HW23App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6E0AB2931FB230098D039 /* HW23App.swift */; };
 		3AB6E0AE2931FB230098D039 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6E0AD2931FB230098D039 /* ContentView.swift */; };
 		3AB6E0B02931FB250098D039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB6E0AF2931FB250098D039 /* Assets.xcassets */; };
@@ -33,16 +35,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A06E5D0293E547A0062C9B0 /* RadioScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioScreenModel.swift; sourceTree = "<group>"; };
+		3A06E5D0293E547A0062C9B0 /* GeneralModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralModel.swift; sourceTree = "<group>"; };
 		3A5F52AA294B6A160063B430 /* CustomSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
 		3A5F52AC294B7DD30063B430 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		3A5F52AE294CA8490063B430 /* Float + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float + Extension.swift"; sourceTree = "<group>"; };
 		3A5F52B0294CB3AF0063B430 /* MusicProgressPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicProgressPlayerView.swift; sourceTree = "<group>"; };
-		3A8F2BC4293CEEB0008EC132 /* RadioTopScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioTopScrollView.swift; sourceTree = "<group>"; };
-		3A8F2BC6293CF0D0008EC132 /* RadioBottomScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioBottomScrollView.swift; sourceTree = "<group>"; };
+		3A5F52B3294CC77F0063B430 /* SearchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailView.swift; sourceTree = "<group>"; };
+		3A5F52B7294CD1CB0063B430 /* CircleEllipsisButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleEllipsisButton.swift; sourceTree = "<group>"; };
+		3A5F52B9294CE0FB0063B430 /* SquareHorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareHorizontalScrollView.swift; sourceTree = "<group>"; };
+		3A8F2BC4293CEEB0008EC132 /* RectangleHorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleHorizontalScrollView.swift; sourceTree = "<group>"; };
+		3A8F2BC6293CF0D0008EC132 /* VerticalListScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalListScrollView.swift; sourceTree = "<group>"; };
 		3A8FA142294B5C200012421E /* LargePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargePlayerView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		3A96782C293657D4005F716D /* MainMediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMediaView.swift; sourceTree = "<group>"; };
-		3AA64EFC294B5A94009561A5 /* SliderPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderPlayerView.swift; sourceTree = "<group>"; };
 		3AB6E0A82931FB230098D039 /* HW23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW23.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB6E0AB2931FB230098D039 /* HW23App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW23App.swift; sourceTree = "<group>"; };
 		3AB6E0AD2931FB230098D039 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +74,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A5F52B2294CC5AF0063B430 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3A5F52AE294CA8490063B430 /* Float + Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3A5F52B5294CC82E0063B430 /* PlayerSubView */ = {
+			isa = PBXGroup;
+			children = (
+				3A5F52B0294CB3AF0063B430 /* MusicProgressPlayerView.swift */,
+				3A5F52AA294B6A160063B430 /* CustomSliderView.swift */,
+			);
+			path = PlayerSubView;
+			sourceTree = "<group>";
+		};
+		3A5F52B6294CD1760063B430 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				3A5F52B2294CC5AF0063B430 /* Extensions */,
+				3A96783029365959005F716D /* Settings */,
+				3A5F52BC294CE1670063B430 /* Model */,
+				3A5F52BB294CE15E0063B430 /* View */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		3A5F52BB294CE15E0063B430 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A5F52B7294CD1CB0063B430 /* CircleEllipsisButton.swift */,
+				3A5F52AC294B7DD30063B430 /* CustomButtonView.swift */,
+				3A5F52B9294CE0FB0063B430 /* SquareHorizontalScrollView.swift */,
+				3A8F2BC4293CEEB0008EC132 /* RectangleHorizontalScrollView.swift */,
+				3A8F2BC6293CF0D0008EC132 /* VerticalListScrollView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3A5F52BC294CE1670063B430 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A06E5D0293E547A0062C9B0 /* GeneralModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3A96782829363CD4005F716D /* MediaTab */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,9 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				3AB6E0BD2931FF870098D039 /* RadioScreenView.swift */,
-				3A8F2BC6293CF0D0008EC132 /* RadioBottomScrollView.swift */,
-				3A8F2BC4293CEEB0008EC132 /* RadioTopScrollView.swift */,
-				3A06E5D0293E547A0062C9B0 /* RadioScreenModel.swift */,
 			);
 			path = RadioTab;
 			sourceTree = "<group>";
@@ -95,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				3AB6E0BF2931FFB70098D039 /* SearchView.swift */,
+				3A5F52B3294CC77F0063B430 /* SearchDetailView.swift */,
 			);
 			path = SearchTab;
 			sourceTree = "<group>";
@@ -110,12 +160,9 @@
 		3A96782F29365938005F716D /* PlayerView */ = {
 			isa = PBXGroup;
 			children = (
+				3A5F52B5294CC82E0063B430 /* PlayerSubView */,
 				3AB6E0C329321C4D0098D039 /* PlayerView.swift */,
 				3A8FA142294B5C200012421E /* LargePlayerView.swift */,
-				3A5F52B0294CB3AF0063B430 /* MusicProgressPlayerView.swift */,
-				3A5F52AC294B7DD30063B430 /* CustomButtonView.swift */,
-				3A5F52AA294B6A160063B430 /* CustomSliderView.swift */,
-				3AA64EFC294B5A94009561A5 /* SliderPlayerView.swift */,
 			);
 			path = PlayerView;
 			sourceTree = "<group>";
@@ -149,9 +196,8 @@
 			children = (
 				3AB6E0AB2931FB230098D039 /* HW23App.swift */,
 				3AB6E0AD2931FB230098D039 /* ContentView.swift */,
+				3A5F52B6294CD1760063B430 /* General */,
 				3AB6E0C52934F7720098D039 /* MainScreen */,
-				3A96783029365959005F716D /* Settings */,
-				3A5F52AE294CA8490063B430 /* Float + Extension.swift */,
 				3AB6E0AF2931FB250098D039 /* Assets.xcassets */,
 				3AB6E0B12931FB250098D039 /* Preview Content */,
 			);
@@ -263,18 +309,20 @@
 				3A5F52AF294CA8490063B430 /* Float + Extension.swift in Sources */,
 				3AB6E0BC2931FDCE0098D039 /* MediaScreenView.swift in Sources */,
 				3A96782D293657D4005F716D /* MainMediaView.swift in Sources */,
-				3AA64EFD294B5A94009561A5 /* SliderPlayerView.swift in Sources */,
 				3AB6E0BA2931FD930098D039 /* LibraryView.swift in Sources */,
+				3A5F52B8294CD1CB0063B430 /* CircleEllipsisButton.swift in Sources */,
 				3AB6E0CA2934F84F0098D039 /* EditScreenModel.swift in Sources */,
-				3A8F2BC5293CEEB0008EC132 /* RadioTopScrollView.swift in Sources */,
+				3A8F2BC5293CEEB0008EC132 /* RectangleHorizontalScrollView.swift in Sources */,
 				3AB6E0CE2934FC310098D039 /* EditScreenTableCell.swift in Sources */,
 				3AB6E0C429321C4D0098D039 /* PlayerView.swift in Sources */,
-				3A06E5D1293E547A0062C9B0 /* RadioScreenModel.swift in Sources */,
+				3A06E5D1293E547A0062C9B0 /* GeneralModel.swift in Sources */,
 				3A5F52B1294CB3AF0063B430 /* MusicProgressPlayerView.swift in Sources */,
+				3A5F52BA294CE0FB0063B430 /* SquareHorizontalScrollView.swift in Sources */,
 				3AB6E0AC2931FB230098D039 /* HW23App.swift in Sources */,
 				3AB6E0C82934F8120098D039 /* EditScreenView.swift in Sources */,
-				3A8F2BC7293CF0D0008EC132 /* RadioBottomScrollView.swift in Sources */,
+				3A8F2BC7293CF0D0008EC132 /* VerticalListScrollView.swift in Sources */,
 				3A8FA143294B5C200012421E /* LargePlayerView.swift in Sources */,
+				3A5F52B4294CC77F0063B430 /* SearchDetailView.swift in Sources */,
 				3A5F52AB294B6A160063B430 /* CustomSliderView.swift in Sources */,
 				3AB6E0C2293205E90098D039 /* Settings.swift in Sources */,
 				3AB6E0C02931FFB70098D039 /* SearchView.swift in Sources */,

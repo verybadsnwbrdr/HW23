@@ -17,7 +17,7 @@ struct PlayerView: View {
             Rectangle()
                 .fill(.gray)
                 .frame(height: 60, alignment: .bottom)
-                .opacity(0)
+				.opacity(0.1)
             HStack {
                 Image(settings.songImage)
                     .resizable()
@@ -45,7 +45,6 @@ struct PlayerView: View {
 					isPresented.toggle()
 				}
 		)
-		
 		.fullScreenCover(isPresented: $isPresented) {
 			LargePlayerView()
 				.offset(x: 0, y: xOffset.height)

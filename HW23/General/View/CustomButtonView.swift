@@ -10,7 +10,7 @@ import SwiftUI
 struct CustomButtonView: View {
 	let image: String
 	let size: CGFloat
-	var action: () -> () = {}
+	var action = {}
 	
     var body: some View {
 		Button {

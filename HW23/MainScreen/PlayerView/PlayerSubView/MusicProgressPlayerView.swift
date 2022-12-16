@@ -23,22 +23,7 @@ struct MusicProgressPlayerView: View {
 				
 				Spacer()
 				
-				Button {
-					
-				} label: {
-					ZStack {
-						Circle()
-							.frame(width: 35, height: 35)
-							.foregroundColor(.white)
-							.opacity(0.1)
-							.shadow(radius: 10)
-							
-						Image(systemName: "ellipsis")
-							.resizable()
-							.aspectRatio(contentMode: .fit)
-							.frame(width: 20)
-					}
-				}
+				CircleEllipsisButton(size: 35)
 			}
 			
 			VStack(spacing: 0) {
