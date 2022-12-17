@@ -15,7 +15,7 @@ struct LibraryView: View {
         TabView {
             VStack {
                 MediaScreenView()
-                PlayerView()
+				PlayerView(playingSong: SongInfoModel.mockModel)
             }
             .tabItem {
                 Image(systemName: images.media)
@@ -24,7 +24,7 @@ struct LibraryView: View {
             
             VStack {
                 RadioScreenView()
-                PlayerView()
+				PlayerView(playingSong: SongInfoModel.mockModel)
             }
             .tabItem {
                 Image(systemName: images.radio)
@@ -33,7 +33,7 @@ struct LibraryView: View {
             
             VStack {
 				SearchView()
-				PlayerView()
+				PlayerView(playingSong: SongInfoModel.mockModel)
             }
             .tabItem {
                 Image(systemName: images.search)

@@ -10,13 +10,17 @@ import SwiftUI
 struct RadioScreenView: View {
     private let title = Settings.TabBarTitles.radio
     private let settings = Settings.Radio.self
+	var models: [[GeneralModel]] = [
+		GeneralModel.topScrollModels,
+		GeneralModel.bottomScrollModels
+	]
     
     var body: some View {
         NavigationView {
             ScrollView {
                 Divider()
                     .padding([.leading,.trailing])
-                RectangleHorizontalScrollView()
+				RectangleHorizontalScrollView(models: models[0])
                 Divider()
                     .padding([.leading,.trailing])
                 HStack {
@@ -26,7 +30,7 @@ struct RadioScreenView: View {
                     Spacer()
                 }
                 .padding()
-                VerticalListScrollView()
+				VerticalListScrollView(models: models[1])
             }
             .navigationTitle(title)
         }
@@ -34,6 +38,8 @@ struct RadioScreenView: View {
 }
 
 struct RadioView_Previews: PreviewProvider {
+	static let mockModels = [GeneralModel.topScrollModels, GeneralModel.bottomScrollModels]
+	
     static var previews: some View {
         RadioScreenView()
     }

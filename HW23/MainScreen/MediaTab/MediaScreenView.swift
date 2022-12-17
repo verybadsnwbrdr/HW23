@@ -23,7 +23,7 @@ struct MediaScreenView: View {
             }
             .navigationTitle(Settings.TabBarTitles.media)
             .navigationBarItems(
-                trailing: Button(isPresented ? settings.editButton : settings.doneButton) {
+                trailing: Button(isPresented ? settings.doneButton : settings.editButton) {
                     isPresented.toggle()
                 }
                     .foregroundColor(.red)

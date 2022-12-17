@@ -8,21 +8,20 @@
 import SwiftUI
 
 struct SearchDetailView: View {
-	// TODO: - Add Model
-//	let model: [GeneralModel]
+	let models: [GeneralModel]
 	private let title = Settings.TabBarTitles.radio
-	private let settings = Settings.Radio.self
+	private let settings = Settings.Search.self
 	@Binding var isPresented: Bool
 	
-    var body: some View {
-		NavigationView {
+	var body: some View {
+		NavigationStack {
 			ScrollView {
 				Divider()
 					.padding([.leading,.trailing])
-				RectangleHorizontalScrollView()
-				SquareHorizontalScrollView()
-				SquareHorizontalScrollView()
-				SquareHorizontalScrollView()
+				RectangleHorizontalScrollView(models: models)
+				SquareHorizontalScrollView(models: models)
+				SquareHorizontalScrollView(models: models)
+				SquareHorizontalScrollView(models: models)
 			}
 		}
 		.navigationTitle("Radio")
@@ -31,7 +30,7 @@ struct SearchDetailView: View {
 			leadingTopToolBar
 			trailingTopToolBar
 		}
-    }
+	}
 }
 
 private extension SearchDetailView {
@@ -50,9 +49,11 @@ private extension SearchDetailView {
 	}
 }
 
-//struct SearchDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-////		SearchDetailView(model: RadioScreenModel.topScrollModels)
-////		SearchDetailView()
-//    }
-//}
+struct SearchDetailView_Previews: PreviewProvider {
+	@State static var mockBinding = true
+	static let mockModels = GeneralModel.topScrollModels
+	
+    static var previews: some View {
+		SearchDetailView(models: mockModels, isPresented: $mockBinding)
+    }
+}

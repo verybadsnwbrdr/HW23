@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct VerticalListScrollView: View {
-    var models = GeneralModel.bottomScrollModels
+	var models: [GeneralModel]
     var columns = [
         GridItem(.flexible())
     ]
@@ -39,7 +39,9 @@ struct VerticalListScrollView: View {
 }
 
 struct BottomScrollView_Previews: PreviewProvider {
+	static let mockModels = GeneralModel.bottomScrollModels
+	
     static var previews: some View {
-        VerticalListScrollView()
+        VerticalListScrollView(models: mockModels)
     }
 }

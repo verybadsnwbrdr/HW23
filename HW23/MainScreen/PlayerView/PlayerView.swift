@@ -11,6 +11,8 @@ struct PlayerView: View {
     private let settings = Settings.Player.self
 	@State private var isPresented = false
 	@State private var xOffset: CGSize = .zero
+	
+	var playingSong: SongInfoModel
     
     var body: some View {
         ZStack {
@@ -32,7 +34,7 @@ struct PlayerView: View {
                         .foregroundColor(.black)
                 }
                 Button(action: { }) {
-                    Image(systemName: settings.skipButton)
+                    Image(systemName: settings.forwardButton)
                         .foregroundColor(.black)
                 }
             }
@@ -46,7 +48,7 @@ struct PlayerView: View {
 				}
 		)
 		.fullScreenCover(isPresented: $isPresented) {
-			LargePlayerView()
+			LargePlayerView(playingSong: playingSong)
 				.offset(x: 0, y: xOffset.height)
 				.animation(.linear, value: xOffset)
 				.gesture(dragGesture)
@@ -74,7 +76,9 @@ private extension PlayerView {
 }
 
 struct PlayerView_Previews: PreviewProvider {
+	static let mockSong = SongInfoModel.mockModel
+	
 	static var previews: some View {
-		PlayerView()
+		PlayerView(playingSong: mockSong)
 	}
 }
