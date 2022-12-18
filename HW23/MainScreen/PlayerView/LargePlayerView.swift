@@ -14,49 +14,52 @@ struct LargePlayerView: View {
     @State private var musicProgress: Float = 100
     @State private var volumeSettings = 34.0
     
-	var body: some View {
-		ZStack {
-			LinearGradient(colors: [ .gray,.brown, .brown], startPoint: .top, endPoint: .bottom)
-				.ignoresSafeArea()
-                
-			
-            VStack(spacing: 25) {
+    var body: some View {
+        ZStack {
+            LinearGradient(colors: [ .gray,.brown, .brown], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+            
+            VStack(spacing: 30) {
                 Capsule()
                     .frame(width: 40, height: 6)
                     .opacity(0.5)
                     .padding(.top, 10)
-
+                
                 Image(playingSong.cover)
-					.resizable()
+                    .resizable()
                     .aspectRatio(contentMode: .fill)
-					.frame(width: 350, height: 350)
-					.cornerRadius(15)
-					.shadow(radius: 10)
-
+                    .frame(width: 340, height: 340)
+                    .cornerRadius(15)
+                    .shadow(radius: 10)
+                
+                
                 MusicProgressPlayerView(musicProgress: $musicProgress, playingSong: playingSong)
-
+                    .padding([.leading, .trailing], 14)
+                
                 HStack(spacing: 80) {
                     CustomButtonView(image: settings.backwardButton, size: 47)
                     CustomButtonView(image: settings.playButton, size: 43)
                     CustomButtonView(image: settings.forwardButton, size: 47)
                 }
-                    .shadow(radius: 10)
-
+                .shadow(radius: 10)
+                
+                
                 Slider(value: $volumeSettings, in: 0 ... 100) {
                 } minimumValueLabel: {
                     Image(systemName: settings.lowerVolume)
                 } maximumValueLabel: {
                     Image(systemName: settings.higherVolume)
                 }
-                    .tint(.white)
-
+                .tint(.white)
+                .padding([.leading, .trailing], 14)
+                
                 HStack(spacing: 80) {
                     CustomButtonView(image: settings.quote, size: 26)
                     CustomButtonView(image: settings.airPlay, size: 26)
                     CustomButtonView(image: settings.list, size: 26)
                 }
             }
-            .padding([.leading, .trailing], 30)
+            .padding([.leading, .trailing])
             .padding(.bottom)
             .foregroundColor(.white)
         }

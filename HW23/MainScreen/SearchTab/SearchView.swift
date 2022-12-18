@@ -12,6 +12,7 @@ struct SearchView: View {
 	private let settings = Settings.Search.self
 	@State var searchText = String()
 	@State var isPresented = Bool()
+	@State var titleText = String()
 	
 	var models: [GeneralModel] = GeneralModel.topScrollModels
 	
@@ -46,9 +47,12 @@ struct SearchView: View {
 								}
 								.onTapGesture {
 									isPresented.toggle()
+									titleText = model.title
 								}
 								.navigationDestination(isPresented: $isPresented) {
-									SearchDetailView(models: models, isPresented: $isPresented)
+									SearchDetailView(title: $titleText,
+													 models: models,
+													 isPresented: $isPresented)
 								}
 						}
 					}

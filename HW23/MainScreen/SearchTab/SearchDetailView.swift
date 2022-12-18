@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct SearchDetailView: View {
+	@Binding var title: String
 	let models: [GeneralModel]
-	private let title = Settings.TabBarTitles.radio
 	private let settings = Settings.Search.self
 	@Binding var isPresented: Bool
 	
@@ -23,8 +23,8 @@ struct SearchDetailView: View {
 				SquareHorizontalScrollView(models: models)
 				SquareHorizontalScrollView(models: models)
 			}
+			.navigationTitle(title)
 		}
-		.navigationTitle("Radio")
 		.navigationBarBackButtonHidden()
 		.toolbar {
 			leadingTopToolBar
@@ -54,6 +54,8 @@ struct SearchDetailView_Previews: PreviewProvider {
 	static let mockModels = GeneralModel.topScrollModels
 	
     static var previews: some View {
-		SearchDetailView(models: mockModels, isPresented: $mockBinding)
+		SearchDetailView(title: .constant("Test"),
+						 models: mockModels,
+						 isPresented: $mockBinding)
     }
 }
