@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RectangleHorizontalScrollView: View {
-    var models = GeneralModel.topScrollModels
+	var models: [GeneralModel]
     var rows = [
         GridItem(.fixed(280))
     ]
@@ -37,7 +37,9 @@ struct RectangleHorizontalScrollView: View {
 }
 
 struct TopScrollView_Previews: PreviewProvider {
+	static let mockModels = GeneralModel.topScrollModels
+	
     static var previews: some View {
-        RectangleHorizontalScrollView()
+        RectangleHorizontalScrollView(models: mockModels)
     }
 }

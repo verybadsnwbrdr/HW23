@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct MusicProgressPlayerView: View {
+	private let settings = Settings.Player.self
 	@Binding var musicProgress: Float
-	var songDuration: Float
+	var playingSong: SongInfoModel
 	
     var body: some View {
 		VStack(spacing: 8) {
 			HStack {
 				VStack(alignment: .leading) {
-					Text("Ssss")
+					Text(playingSong.singer)
 						.bold()
-					Text("Evgenia")
+					Text(playingSong.songName)
 				}
 				.font(.system(size: 22))
 				
@@ -27,11 +28,11 @@ struct MusicProgressPlayerView: View {
 			}
 			
 			VStack(spacing: 0) {
-				CustomSliderView(value: $musicProgress, maxValue: songDuration)
+				CustomSliderView(value: $musicProgress, songDuration: playingSong.songDuration)
 				HStack {
 					Text(musicProgress.displayTime())
 					Spacer()
-					Text(songDuration.displayTime())
+					Text(playingSong.songDuration.displayTime())
 				}
 				.font(.system(size: 14))
 				.opacity(0.4)

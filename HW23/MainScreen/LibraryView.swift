@@ -12,35 +12,44 @@ struct LibraryView: View {
     private let images = Settings.TabBarImages.self
     
     var body: some View {
-        TabView {
-            VStack {
-                MediaScreenView()
-                PlayerView()
-            }
-            .tabItem {
-                Image(systemName: images.media)
-                Text(titles.media)
-            }
-            
-            VStack {
-                RadioScreenView()
-                PlayerView()
-            }
-            .tabItem {
-                Image(systemName: images.radio)
-                Text(titles.radio)
-            }
-            
-            VStack {
-				SearchView()
-				PlayerView()
-            }
-            .tabItem {
-                Image(systemName: images.search)
-                Text(titles.search)
-            }
-        }
-        .accentColor(.red)
+		ZStack(alignment: .bottom) {
+			TabView {
+				VStack {
+					MediaScreenView()
+					Rectangle()
+						.frame(height: 53)
+						.opacity(0)
+				}
+				.tabItem {
+					Image(systemName: images.media)
+					Text(titles.media)
+				}
+				
+				VStack {
+					RadioScreenView()
+					Rectangle()
+						.frame(height: 53)
+						.opacity(0)
+				}
+				.tabItem {
+					Image(systemName: images.radio)
+					Text(titles.radio)
+				}
+				
+				VStack {
+					SearchView()
+					Rectangle()
+						.frame(height: 53)
+						.opacity(0)
+				}
+				.tabItem {
+					Image(systemName: images.search)
+					Text(titles.search)
+				}
+			}
+			.accentColor(.red)
+			PlayerView(playingSong: SongInfoModel.mockModel)
+		}
     }
 }
 
@@ -49,3 +58,5 @@ struct LibraryView_Previews: PreviewProvider {
         LibraryView()
     }
 }
+
+//					PlayerView(playingSong: SongInfoModel.mockModel)

@@ -11,13 +11,21 @@ struct PlayerView: View {
     private let settings = Settings.Player.self
 	@State private var isPresented = false
 	@State private var xOffset: CGSize = .zero
+	
+	var playingSong: SongInfoModel
     
     var body: some View {
-        ZStack {
+		ZStack(alignment: .bottom) {
             Rectangle()
                 .fill(.gray)
                 .frame(height: 60, alignment: .bottom)
 				.opacity(0.1)
+				.gesture(
+					TapGesture()
+						.onEnded {
+							isPresented.toggle()
+						}
+				)
             HStack {
                 Image(settings.songImage)
                     .resizable()
@@ -32,49 +40,26 @@ struct PlayerView: View {
                         .foregroundColor(.black)
                 }
                 Button(action: { }) {
-                    Image(systemName: settings.skipButton)
+                    Image(systemName: settings.forwardButton)
                         .foregroundColor(.black)
                 }
             }
 			.padding([.top, .bottom], 5)
 			.padding([.leading, .trailing], 30)
+			FullScreenPlayerView(playingSong: playingSong, isPresented: $isPresented)
+				.offset(x: 0, y: 50)
+				.animation(.easeInOut, value: isPresented)
         }
-		.gesture(
-			TapGesture()
-				.onEnded {
-					isPresented.toggle()
-				}
-		)
-		.fullScreenCover(isPresented: $isPresented) {
-			LargePlayerView()
-				.offset(x: 0, y: xOffset.height)
-				.animation(.linear, value: xOffset)
-				.gesture(dragGesture)
-		}
+		.offset(x: 0, y: -50)
     }
 }
 
-private extension PlayerView {
-	var dragGesture: some Gesture {
-		DragGesture(minimumDistance: 10)
-			.onChanged { value in
-				if value.translation.height > 0 {
-					xOffset.height = value.translation.height
-				}
-			}
-			.onEnded { value in
-				if xOffset.height > 300 {
-					isPresented.toggle()
-					xOffset.height = .zero
-				} else {
-					xOffset.height = .zero
-				}
-			}
-	}
-}
+
 
 struct PlayerView_Previews: PreviewProvider {
+	static let mockSong = SongInfoModel.mockModel
+	
 	static var previews: some View {
-		PlayerView()
+		PlayerView(playingSong: mockSong)
 	}
 }

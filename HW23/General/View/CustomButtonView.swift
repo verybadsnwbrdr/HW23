@@ -25,3 +25,8 @@ struct CustomButtonView: View {
     }
 }
 
+struct CustomButtonView_Previews: PreviewProvider {
+	static var previews: some View {
+		CustomButtonView(image: "play.fill", size: 40)
+	}
+}

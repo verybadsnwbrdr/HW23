@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SquareHorizontalScrollView: View {
-	var models: [GeneralModel] = GeneralModel.bottomScrollModels
+	var models: [GeneralModel]
 	
 	var body: some View {
 		VStack(spacing: 5) {
@@ -45,7 +45,9 @@ struct SquareHorizontalScrollView: View {
 }
 
 struct SquareHorizontalScrollView_Previews: PreviewProvider {
+	static let mockModels = GeneralModel.bottomScrollModels
+	
     static var previews: some View {
-        SquareHorizontalScrollView()
+        SquareHorizontalScrollView(models: mockModels)
     }
 }

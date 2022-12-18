@@ -9,10 +9,12 @@ import SwiftUI
 
 struct SearchView: View {
 	private let title = Settings.TabBarTitles.search
-	@State var searchText = ""
-	@State var isPresented = false
+	private let settings = Settings.Search.self
+	@State var searchText = String()
+	@State var isPresented = Bool()
+	@State var titleText = String()
 	
-	private var models: [GeneralModel] = GeneralModel.topScrollModels
+	var models: [GeneralModel] = GeneralModel.topScrollModels
 	
 	private let columns = [
 		GridItem(.flexible()),
@@ -22,7 +24,7 @@ struct SearchView: View {
 	var body: some View {
 		NavigationStack {
 			VStack(alignment: .leading) {
-				Text("Поиск по категориям")
+				Text(settings.categoriesSearch)
 					.font(.title3)
 					.bold()
 					.padding([.leading, .trailing])
@@ -45,10 +47,12 @@ struct SearchView: View {
 								}
 								.onTapGesture {
 									isPresented.toggle()
+									titleText = model.title
 								}
 								.navigationDestination(isPresented: $isPresented) {
-									// TODO: - Add Model
-									SearchDetailView(isPresented: $isPresented)
+									SearchDetailView(title: $titleText,
+													 models: models,
+													 isPresented: $isPresented)
 								}
 						}
 					}
@@ -57,12 +61,14 @@ struct SearchView: View {
 			}
 			.navigationTitle(title)
 		}
-		.searchable(text: $searchText, prompt: "Ваша медиатека")
+		.searchable(text: $searchText, prompt: settings.searchPlaceHolder)
 	}
 }
 
 struct SearchView_Previews: PreviewProvider {
+	static let mockModels = GeneralModel.topScrollModels
+	
 	static var previews: some View {
-		SearchView()
+		SearchView(models: mockModels)
 	}
 }

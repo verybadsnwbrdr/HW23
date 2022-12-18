@@ -9,12 +9,12 @@ import SwiftUI
 
 struct CustomSliderView: UIViewRepresentable {
 	@Binding var value: Float
-	var maxValue: Float
+	var songDuration: Float
 
 	func makeUIView(context: Context) -> UISlider {
 		let slider = UISlider()
 		slider.minimumValue = 0
-		slider.maximumValue = maxValue
+		slider.maximumValue = songDuration
 		slider.value = value
 		slider.thumbTintColor = UIColor(white: 1, alpha: 0)
 		slider.tintColor = .white
