@@ -27,13 +27,13 @@ struct PlayerView: View {
 						}
 				)
             HStack {
-                Image(settings.songImage)
+				Image(playingSong.cover)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 46, height: 46)
                     .cornerRadius(5)
                     .shadow(color: .gray, radius: 5)
-                Text(settings.songName)
+                Text(playingSong.songName)
                 Spacer()
                 Button(action: { }) {
                     Image(systemName: settings.playButton)

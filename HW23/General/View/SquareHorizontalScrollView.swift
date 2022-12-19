@@ -40,7 +40,6 @@ struct SquareHorizontalScrollView: View {
 				.padding([.leading, .trailing])
 			}
 		}
-		
     }
 }
 
